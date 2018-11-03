@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Overpass:600|Source+Sans+Pro:600');
+$circle: 50%;
+$rounded: 5px;
+%row-spevenly {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+%row-between {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+%col-spevenly{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+%col-sparound{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+body {
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    font-family: 'Overpass', sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    margin: 0px;
+}
+
+h5 {
+    font-family: 'Overpass', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0px auto;
+}
+
+.header {
+    padding: 10px;
+    font-family: 'Overpass', sans-serif;
+    @extend %row-between;
+
+    .header-nav {
+        @extend %row-spevenly;
+        width: 470px;
+    }
+
+    .header-profile {
+        @extend %row-spevenly;
+    }
+        .header-profile-text {
+            @extend %col-spevenly;
+            align-items: flex-end;
+            font-size: 14px;
+        }
+            span:nth-child(2) {
+                color: #c2c2c2;
+                font-size: 12px;
+            }
+
+    .header-profile-pic {
+        border-radius: $circle;
+        width: 40px;
+        height: 40px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+
+.logo {
+    width: 134px;
+    height: 24px;
+}
+
+#landing {
+    background-image: url('../images/bg-1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.landing {
+    height: 725px;
+    color: white;
+    @extend %row-between;
+
+    .landing-left-side {
+        @extend %col-spevenly;
+        align-items: flex-start;
+        width: 40%;
+        height: 70%;
+
+        .landing-left-side-item:nth-child(2) {
+            font-size: 20px;
+        }
+        .landing-left-side-item:nth-child(3) {
+            text-align: center;
+            background-color: #ef6c00;
+            width: 65%;
+            border-radius: $rounded;
+            padding: 10px;
+        }
+    }
+}

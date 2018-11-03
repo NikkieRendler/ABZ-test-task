@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css?family=Overpass:600|Source+Sans+Pro:600");
+.header .header-nav, .header .header-profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header, .landing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .header-profile-text, .landing .landing-left-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body {
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-family: 'Overpass', sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  margin: 0px;
+}
+
+h5 {
+  font-family: 'Overpass', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0px auto;
+}
+
+.header {
+  padding: 10px;
+  font-family: 'Overpass', sans-serif;
+}
+
+.header .header-nav {
+  width: 470px;
+}
+
+.header .header-profile-text {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: 14px;
+}
+
+.header span:nth-child(2) {
+  color: #c2c2c2;
+  font-size: 12px;
+}
+
+.header .header-profile-pic {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.logo {
+  width: 134px;
+  height: 24px;
+}
+
+#landing {
+  background-image: url("../images/bg-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.landing {
+  height: 725px;
+  color: white;
+}
+
+.landing .landing-left-side {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 40%;
+  height: 70%;
+}
+
+.landing .landing-left-side .landing-left-side-item:nth-child(2) {
+  font-size: 20px;
+}
+
+.landing .landing-left-side .landing-left-side-item:nth-child(3) {
+  text-align: center;
+  background-color: #ef6c00;
+  width: 65%;
+  border-radius: 5px;
+  padding: 10px;
+}
+/*# sourceMappingURL=main.css.map */
