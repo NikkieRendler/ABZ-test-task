@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import Landing from './Landing';
+import Aquainted from './Aquainted';
 import Requirements from './Requirements';
 import Technologies from './Technologies';
 import UserList from './UserList';
@@ -12,6 +13,9 @@ class App extends Component {
         <div>
             <Header/>
             <Landing/>
+            <Aquainted/>
+            <Technologies/>
+            <Requirements/>
         </div>
     ) 
 }}

@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Overpass:600|Source+Sans+Pro:600");
-.header .header-nav, .header .header-profile {
+#header .header .header-nav, #header .header .header-profile, #requirements .container .requirements {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,7 +15,7 @@
           align-items: center;
 }
 
-.header, .landing {
+#header .header, #landing .landing, #technologies .container .technologies {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,7 +31,23 @@
           align-items: center;
 }
 
-.header .header-profile-text, .landing .landing-left-side {
+#aquainted .aquainted {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header .header .header-profile-text, #landing .landing .landing-left-side, #aquainted .aquainted .aquainted-right-side, #technologies .container, #requirements .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,6 +63,34 @@
           align-items: center;
 }
 
+#technologies .container .technologies .technologies-card, #requirements .container .requirements .requirements-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#technologies .container .technologies .technologies-card:nth-child(1) .technologies-card-img, #technologies .container .technologies .technologies-card:nth-child(2) .technologies-card-img, #technologies .container .technologies .technologies-card:nth-child(3) .technologies-card-img {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#landing, #requirements, #requirements .container .requirements .requirements-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 body {
   margin: 0px;
 }
@@ -60,13 +104,30 @@ h1 {
   font-family: 'Overpass', sans-serif;
   font-size: 50px;
   font-weight: 600;
-  margin: 0px;
+  margin: 0;
+  text-align: center;
+}
+
+h3 {
+  font-family: 'Overpass', sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+}
+
+h4 {
+  font-family: 'Overpass', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
 }
 
 h5 {
   font-family: 'Overpass', sans-serif;
   font-size: 18px;
   font-weight: 600;
+  margin: 0;
 }
 
 .container {
@@ -75,28 +136,36 @@ h5 {
   margin: 0px auto;
 }
 
-.header {
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+}
+
+#header .header {
   padding: 10px;
   font-family: 'Overpass', sans-serif;
 }
 
-.header .header-nav {
+#header .header .header-nav {
   width: 470px;
 }
 
-.header .header-profile-text {
+#header .header .header-profile-text {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
   font-size: 14px;
 }
 
-.header span:nth-child(2) {
+#header .header span:nth-child(2) {
   color: #c2c2c2;
   font-size: 12px;
 }
 
-.header .header-profile-pic {
+#header .header .header-profile-pic {
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -110,17 +179,16 @@ h5 {
 }
 
 #landing {
+  margin-top: 60px;
   background-image: url("../images/bg-1.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
-.landing {
+#landing .landing {
   height: 725px;
   color: white;
 }
 
-.landing .landing-left-side {
+#landing .landing .landing-left-side {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -128,15 +196,134 @@ h5 {
   height: 70%;
 }
 
-.landing .landing-left-side .landing-left-side-item:nth-child(2) {
+#landing .landing .landing-left-side .landing-left-side-item:nth-child(2) {
   font-size: 20px;
 }
 
-.landing .landing-left-side .landing-left-side-item:nth-child(3) {
+#landing .landing .landing-left-side .landing-left-side-item:nth-child(3) {
   text-align: center;
   background-color: #ef6c00;
   width: 65%;
   border-radius: 5px;
   padding: 10px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+#aquainted {
+  padding-top: 100px;
+}
+
+#aquainted .aquainted {
+  height: 300px;
+}
+
+#aquainted .aquainted .aquainted-left-side {
+  background-image: url("../images/man-mobile.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 35%;
+  height: 70%;
+}
+
+#aquainted .aquainted .aquainted-right-side {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 55%;
+  height: 70%;
+}
+
+#aquainted .aquainted .aquainted-right-side .aquainted-right-side-item:nth-child(2), #aquainted .aquainted .aquainted-right-side :nth-child(3) {
+  font-size: 16px;
+  color: #4c4b4b;
+}
+
+#aquainted .aquainted .aquainted-right-side .aquainted-right-side-item:nth-child(4) {
+  text-align: center;
+  color: #ef6c00;
+}
+
+#technologies .container .technologies {
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+#technologies .container .technologies .technologies-card {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 30%;
+}
+
+#technologies .container .technologies .technologies-card .technologies-card-item {
+  padding: 5px 0px 5px 0px;
+}
+
+#technologies .container .technologies .technologies-card .technologies-card-text {
+  font-size: 16px;
+  color: #4c4b4b;
+}
+
+#technologies .container .technologies .technologies-card:nth-child(1) .technologies-card-img {
+  background-image: url("../images/html.svg");
+  height: 115px;
+  width: 100px;
+}
+
+#technologies .container .technologies .technologies-card:nth-child(1) .technologies-card-text {
+  width: 88%;
+}
+
+#technologies .container .technologies .technologies-card:nth-child(2) .technologies-card-img {
+  background-image: url("../images/css.svg");
+  height: 115px;
+  width: 100px;
+}
+
+#technologies .container .technologies .technologies-card:nth-child(2) .technologies-card-text {
+  width: 65%;
+}
+
+#technologies .container .technologies .technologies-card:nth-child(3) .technologies-card-img {
+  background-image: url("../images/javascript.svg");
+  height: 115px;
+  width: 100px;
+}
+
+#technologies .container .technologies .technologies-card:nth-child(3) .technologies-card-text {
+  width: 80%;
+}
+
+#requirements {
+  background-image: url("../images/bg-2.jpg");
+  color: #fff;
+}
+
+#requirements .container {
+  font-family: 'SourceSansPro-Regular', sans-serif;
+}
+
+#requirements .container .requirements-header {
+  padding-top: 150px;
+}
+
+#requirements .container .requirements {
+  height: 700px;
+}
+
+#requirements .container .requirements .requirements-text {
+  font-size: 16px;
+  width: 40%;
+  height: 60%;
+  line-height: 1.5;
+}
+
+#requirements .container .requirements .requirements-img {
+  background-image: url("../images/man-laptop-v1.svg");
+  width: 50%;
+  width: 429px;
+  height: 361px;
 }
 /*# sourceMappingURL=main.css.map */
