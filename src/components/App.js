@@ -4,7 +4,7 @@ import Landing from './Landing';
 import Aquainted from './Aquainted';
 import Requirements from './Requirements';
 import Technologies from './Technologies';
-import UserList from './UserList';
+import UserList from './APIrequests/UserList';
 import '../css/main.css';
 
 class App extends Component {
@@ -16,6 +16,7 @@ class App extends Component {
             <Aquainted/>
             <Technologies/>
             <Requirements/>
+            <UserList/>
         </div>
     ) 
 }}

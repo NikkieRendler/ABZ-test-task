@@ -53,6 +53,16 @@ $rounded: 5px;
     background-repeat: no-repeat;
     background-position: center;
 }
+%button {
+    text-align: center;
+    border-radius: $rounded;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+}
+.invisible {
+    display: none;
+}
 
 
 body {
@@ -85,6 +95,7 @@ h4 {
     font-size: 22px;
     font-weight: 600;
     margin: 0;
+    text-align: center;
 }
 
 h5 {
@@ -92,6 +103,7 @@ h5 {
     font-size: 18px;
     font-weight: 600;
     margin: 0;
+    text-align: center;
 }
 
 .container {
@@ -163,13 +175,9 @@ h5 {
                 font-size: 20px;
             }
             .landing-left-side-item:nth-child(3) {
-                text-align: center;
+                @extend %button;
                 background-color: #ef6c00;
                 width: 65%;
-                border-radius: $rounded;
-                padding: 10px;
-                font-weight: 600;
-                font-size: 20px;
             }
         }
     }
@@ -300,6 +308,58 @@ h5 {
                 width: 429px;
                 height: 361px;
             }
+        }
+    }
+}
+
+#userList {
+
+    .container {
+        @extend %col-spevenly;
+        font-family: 'SourceSansPro-Regular', sans-serif;
+
+        .userList-header {
+            padding-top: 50px;
+            @extend %col-spevenly;
+            height: 150px;
+        }
+
+        .userList {
+            @extend %row-spevenly;
+
+            .userList-user {
+                @extend %row-flstart;
+                flex-flow: row nowrap;
+                width: 30%;
+
+                .user-photo {
+                    border-radius: $circle;
+                }
+
+                .user-info {
+                    @extend %col-spevenly;
+                    align-items: flex-start;
+                    padding: 17% 0px 0px 15px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    
+                    .user-text {
+                        color: rgba(76, 75, 75, 255);
+                        font-size: 14px;
+                        width: 100%;
+                        padding-top: 3px;
+                    }
+                }
+                
+            }
+        }
+        a {
+            @extend %button;
+            color: #ef6c00;
+            border: 2px #ef6c00 solid;
+            width: 20%;
+            margin-top: 20px;
         }
     }
 }

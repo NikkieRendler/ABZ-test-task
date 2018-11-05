@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-import signOut from '../icons/sign-out.svg';
+import signOut from '../../../icons/sign-out.svg';
 
 class HeaderUser extends Component {
     constructor(props) {
@@ -21,7 +21,7 @@ class HeaderUser extends Component {
         })
             .then(response => {
                 let user = response.data.user
-                console.log(user);
+                console.log('headerUser:',user);
                 this.setState({ userName: user.name })
                 this.setState({ userEmail: user.email })
                 this.setState({ userImg: user.photo })
@@ -34,8 +34,8 @@ class HeaderUser extends Component {
                     <span>{this.state.userName}</span>
                     <span>{this.state.userEmail}</span>
                 </div>
-                <img src={this.state.userImg} className='header-profile-pic' />
-                <img src={signOut} />
+                <img src={this.state.userImg} alt='User img' className='header-profile-pic' />
+                <img src={signOut} alt='Sign Out' />
             </div>
         )
     }
