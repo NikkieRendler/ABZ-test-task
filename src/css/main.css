@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Overpass:600|Source+Sans+Pro:600");
-#header .header .header-nav, #header .header .header-profile, #requirements .container .requirements, #userList .container .userList {
+#header .header .header-nav, #header .header .header-profile, #requirements .container .requirements, #userList .container .userList, #auth .container .auth-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,7 +15,7 @@
           align-items: center;
 }
 
-#header .header, #landing .landing, #technologies .container .technologies {
+#header .header, #landing .landing, #technologies .container .technologies, #auth .container .auth-form-positionList .auth-form-positionList-header, #auth .container .auth-form-selectFile {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,7 +47,7 @@
           align-items: center;
 }
 
-#header .header .header-profile-text, #landing .landing .landing-left-side, #aquainted .aquainted .aquainted-right-side, #technologies .container, #requirements .container, #userList .container, #userList .container .userList-header, #userList .container .userList .userList-user .user-info {
+#header .header .header-profile-text, #landing .landing .landing-left-side, #aquainted .aquainted .aquainted-right-side, #technologies .container, #requirements .container, #userList .container, #userList .container .userList-header, #userList .container .userList .userList-user .user-info, #auth .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,7 +63,7 @@
           align-items: center;
 }
 
-#technologies .container .technologies .technologies-card, #requirements .container .requirements .requirements-text {
+#technologies .container .technologies .technologies-card, #requirements .container .requirements .requirements-text, #auth .container .auth-form .auth-form-item, #auth .container .auth-form-positionList {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -91,7 +91,7 @@
   background-position: center;
 }
 
-#landing .landing .landing-left-side .landing-left-side-item:nth-child(3), #userList .container a {
+#landing .landing .landing-left-side .landing-left-side-item:nth-child(3), #userList .container a, #auth .container .auth-form-selectFile .auth-form-selectFile-button {
   text-align: center;
   border-radius: 5px;
   padding: 10px;
@@ -100,11 +100,26 @@
 }
 
 .invisible {
-  display: none;
+  display: none !important;
+}
+
+.visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#auth .container .auth-form .auth-form-item, #auth .container .auth-form-positionList, #auth .container .auth-form-selectFile {
+  width: 30%;
+  margin-top: 30px;
+  border: 1px #8d8c8c solid;
+  border-radius: 5px;
 }
 
 body {
   margin: 0px;
+  min-width: 320px;
+  max-width: 2560px;
 }
 
 a {
@@ -355,6 +370,8 @@ h5 {
 
 #userList .container .userList .userList-user .user-photo {
   border-radius: 50%;
+  width: 70px;
+  height: 70px;
 }
 
 #userList .container .userList .userList-user .user-info {
@@ -379,5 +396,88 @@ h5 {
   border: 2px #ef6c00 solid;
   width: 20%;
   margin-top: 20px;
+}
+
+#auth {
+  padding-top: 200px;
+}
+
+#auth .container .auth-form {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#auth .container .auth-form .auth-form-item .auth-form-item-header {
+  color: #8d8c8c;
+  font-size: 12px;
+  background-color: #fff;
+  margin: -8px 0px 0px -100px;
+  position: absolute;
+}
+
+#auth .container .auth-form .auth-form-item input {
+  border: none;
+  width: 80%;
+  outline: none;
+  padding: 15px;
+}
+
+#auth .container .auth-form .auth-form-item .auth-form-item:nth-child(3) {
+  width: 40%;
+}
+
+#auth .container .auth-form .auth-form-item .auth-form-item:nth-child(4) {
+  width: 40%;
+}
+
+#auth .container .auth-form-positionList {
+  padding: 15px 15px 0px 15px;
+  width: 50%;
+}
+
+#auth .container .auth-form-positionList .auth-form-positionList-header {
+  width: 100%;
+  padding: 0px 15px 15px 15px;
+}
+
+#auth .container .auth-form-positionList .auth-form-positionList-item {
+  border-top: 1px #8d8c8c solid;
+  width: 100%;
+  padding: 15px;
+}
+
+#auth .container .auth-form-positionList .auth-form-positionList-item:hover {
+  background-color: rgba(239, 108, 0, 0.5);
+}
+
+#auth .container .auth-form-positionList:hover {
+  cursor: pointer;
+}
+
+#auth .container .auth-form-selectFile {
+  width: 40%;
+}
+
+#auth .container .auth-form-selectFile #fileInput {
+  opacity: 0;
+  position: absolute;
+}
+
+#auth .container .auth-form-selectFile .fileName {
+  padding-left: 10px;
+}
+
+#auth .container .auth-form-selectFile .auth-form-selectFile-button {
+  border: 2px #ef6c00 solid;
+  padding: 14px;
+  margin: -1px;
+}
+
+#auth .container .auth-form-selectFile .fileInput-undertext {
+  position: absolute;
+  margin: 40px 0px 0px 20px;
+  color: #8d8c8c;
+  font-size: 12px;
 }
 /*# sourceMappingURL=main.css.map */

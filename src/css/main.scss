@@ -25,6 +25,12 @@ $rounded: 5px;
     justify-content: flex-start;
     align-items: center;
 }
+%row-flend {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
 %col-spevenly{
     display: flex;
     flex-flow: column wrap;
@@ -61,12 +67,23 @@ $rounded: 5px;
     font-size: 20px;
 }
 .invisible {
-    display: none;
+    display: none !important;
+}
+.visible {
+    display: flex;
+}
+%auth-form-item {
+    width: 30%;
+    margin-top: 30px;
+    border: 1px rgba(141, 140, 140, 255) solid;
+    border-radius: $rounded;
 }
 
 
 body {
     margin: 0px;
+    min-width: 320px;
+    max-width: 2560px;
 }
 
 a {
@@ -117,6 +134,8 @@ h5 {
     left: 0;
     right: 0;
     background-color: #fff;
+    
+
     .header {
         padding: 10px;
         font-family: 'Overpass', sans-serif;
@@ -334,6 +353,8 @@ h5 {
 
                 .user-photo {
                     border-radius: $circle;
+                    width: 70px;
+                    height: 70px;
                 }
 
                 .user-info {
@@ -357,9 +378,101 @@ h5 {
         a {
             @extend %button;
             color: #ef6c00;
-            border: 2px #ef6c00 solid;
+            border: 2px rgb(239, 108, 0) solid;
             width: 20%;
             margin-top: 20px;
         }
+    }
+}
+
+#auth {
+    padding-top: 200px;
+
+    .container {
+        @extend %col-spevenly;
+
+        .auth-form {
+            @extend %row-spevenly;
+            align-items: flex-start;
+
+            .auth-form-item {
+                @extend %col-spbetween, %auth-form-item;
+
+                .auth-form-item-header {
+                    color: rgba(141, 140, 140, 255);
+                    font-size: 12px;
+                    background-color: #fff;
+                    margin: -8px 0px 0px -100px;
+                    position: absolute;
+                }
+
+                input {
+                    border: none;
+                    width: 80%;
+                    outline: none;
+                    padding: 15px;
+                }
+            
+
+                .auth-form-item:nth-child(3) {
+                    width: 40%;
+                }
+
+                .auth-form-item:nth-child(4) {
+                    width: 40%;
+                }
+            }   
+        }
+
+        .auth-form-positionList {
+            @extend %col-spbetween, %auth-form-item;
+            padding: 15px 15px 0px 15px;
+            width: 50%;
+
+            .auth-form-positionList-header {
+                @extend %row-spbetween;
+                width: 100%;
+                padding: 0px 15px 15px 15px;
+            }
+            
+            .auth-form-positionList-item {
+                border-top: 1px rgba(141, 140, 140, 255) solid;
+                width: 100%;
+                padding: 15px;
+            }
+
+            .auth-form-positionList-item:hover {
+                background-color: rgba(239, 108, 0, 0.5);
+            }
+        }
+        .auth-form-positionList:hover {
+            cursor: pointer;
+        }
+
+        .auth-form-selectFile {
+            @extend %row-spbetween, %auth-form-item;
+            width: 40%;
+            
+            #fileInput {
+                opacity: 0;
+                position: absolute;
+            }
+            .fileName {
+                padding-left: 10px
+            }
+            .auth-form-selectFile-button {
+                @extend %button;
+                border: 2px #ef6c00 solid;
+                padding: 14px;
+                margin: -1px;
+            }
+            .fileInput-undertext {
+                position: absolute;
+                margin: 40px 0px 0px 20px;
+                color: rgba(141, 140, 140, 255);
+                font-size: 12px;
+            }
+        }
+        
     }
 }

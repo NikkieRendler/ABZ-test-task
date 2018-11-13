@@ -21,7 +21,6 @@ class HeaderUser extends Component {
         })
             .then(response => {
                 let user = response.data.user
-                console.log('headerUser:',user);
                 this.setState({ userName: user.name })
                 this.setState({ userEmail: user.email })
                 this.setState({ userImg: user.photo })

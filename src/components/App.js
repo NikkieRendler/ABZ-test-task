@@ -4,7 +4,9 @@ import Landing from './Landing';
 import Aquainted from './Aquainted';
 import Requirements from './Requirements';
 import Technologies from './Technologies';
-import UserList from './APIrequests/UserList';
+import UserList from './UserList';
+import Auth from './Auth'
+import { observer, inject } from 'mobx-react';
 import '../css/main.css';
 
 class App extends Component {
@@ -17,8 +19,9 @@ class App extends Component {
             <Technologies/>
             <Requirements/>
             <UserList/>
+            <Auth/>
         </div>
     ) 
 }}
 
-export default App
+export default inject('store')(observer(App))

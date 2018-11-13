@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../../images/logo.svg';
-import HeaderUser from '../APIrequests/HeaderUser';
+import HeaderUser from './HeaderUser';
 
 class Header extends Component {
     render() {
